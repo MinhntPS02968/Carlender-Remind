@@ -4,13 +4,21 @@ body {
     margin: 0;
     padding: 0;
 }
-.calendar-left{
+
+.calendar-left {
     height: 500px;
     border-radius: 20px 0px 0px 20px;
     background-color: #2ECC71;
     color: white;
 }
-.calendar-base{
+
+.calendar-base {
+    height: 500px;
+    background-color: white;
+    color: black;
+}
+
+.calendar-right {
     height: 500px;
     -webkit-border-top-right-radius: 20px;
     -webkit-border-bottom-right-radius: 20px;
@@ -21,16 +29,19 @@ body {
     background-color: white;
     color: black;
 }
+
 .year {
     color: #E8E8E8;
     font-weight: bold;
     font-size: 30px;
 }
+
 .months {
     color: #27AE60;
     font-size: 30px;
-    border-bottom: 2px #E8E8E8 solid ;
+    border-bottom: 2px #E8E8E8 solid;
 }
+
 .days {
     color: #AAAAAA;
     font-size: 18px;
@@ -41,23 +52,33 @@ body {
 .grey {
     color: #AAAAB1;
 }
-table{
+
+.calendar-base table {
     height: 350px;
 }
-tr td a{
+
+.calendar-base table tr td a {
     color: black;
     padding: 10px;
     border-radius: 50px;
 }
-tr td a:hover{
+
+.calendar-base table tr td a:hover {
     text-decoration: none;
     background-color: #2ECC71;
     color: white;
 }
-tr td a:focus{
+
+.calendar-base table tr td a:focus {
     background-color: #2ECC71;
     color: white;
 }
+
+.calendar-right table {
+    width: 400px;
+    height: 350px;
+}
+
 .num-date {
     font-size: 50px;
     font-weight: 700;
@@ -65,4 +86,8 @@ tr td a:focus{
 
 .day {
     font-size: 15px;
+}
+
+.fix-height-tr {
+    height: 0.1em !important;
 }
