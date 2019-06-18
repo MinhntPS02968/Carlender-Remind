@@ -31,7 +31,6 @@ body {
 }
 
 .year {
-    color: #E8E8E8;
     font-weight: bold;
     font-size: 30px;
 }
@@ -73,7 +72,10 @@ body {
     background-color: #2ECC71;
     color: white;
 }
-
+.calendar-right .scrollsdown {
+    overflow: auto;
+    height: 400px;
+}
 .calendar-right table {
     width: 400px;
     height: 350px;
