@@ -48,7 +48,12 @@ body {
     font-weight: 600;
 }
 
-.grey {
+.calendar-base .grey a {
+    color: #AAAAB1;
+}
+
+.calendar-base .grey a:hover{
+    background-color: transparent;
     color: #AAAAB1;
 }
 
