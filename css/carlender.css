@@ -56,7 +56,10 @@ body {
     background-color: transparent;
     color: #AAAAB1;
 }
-
+.calendar-base .grey a:focus{
+    background-color: transparent;
+    color: #AAAAB1;
+}
 .calendar-base table {
     height: 350px;
 }
