@@ -44,10 +44,19 @@
                                     </div>
                                 </div>
 
-                                <div class="row mt-3">
+                                <div class="row mt-2">
+                                    <div class="col-lg-12">
+                                        <div class="form-check-inline">
+                                            <input type="checkbox" class="form-check-input"  id="Checkbox" v-model="isAllDay">
+                                            <label class="form-check-label" for="Checkbox">Cả ngày</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div></div>
+                                <div class="row mt-2">
                                     <div class="col-6">
                                         <label>Từ</label>
-                                        <select class="form-control">
+                                        <select class="form-control" id="from" :disabled="isAllDay" >
                                             <option>08:00</option>
                                             <option>08:30</option>
                                             <option>09:00</option>
@@ -72,7 +81,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label>Đến</label>
-                                        <select class="form-control">
+                                        <select class="form-control" id="to" :disabled="isAllDay">
                                             <option>08:00</option>
                                             <option>08:30</option>
                                             <option>09:00</option>
@@ -251,7 +260,8 @@
     var app = new Vue({
         el: '#app',
         data: {
-            list_days: []
+            list_days: [],
+            isAllDay: true,
         },
         created: function () {
             let vm = this;
@@ -279,8 +289,14 @@
                     vm.list_days.push(data_y);
                 }
                 console.log(vm.list_days);
-            }
+            },
 
+        },
+        watch: {
+            'isAllDay': function () {
+                let vm = this;
+                console.log(vm.isAllDay);
+            }
         }
     })
 </script>
